@@ -1,0 +1,848 @@
+{
+	"info": {
+		"_postman_id": "b09ad7b1-0aae-4246-bc2b-28c1257ae802",
+		"name": "KishanBestAPIPractice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10221996"
+	},
+	"item": [
+		{
+			"name": "BasicApi",
+			"item": [
+				{
+					"name": "GetRequest",
+					"item": [
+						{
+							"name": "ListofUsers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/users?page=2",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsingleUser",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/users/2",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsingleusernotfound",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/users/23",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users",
+										"23"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListofResource",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/unknown",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"unknown"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SingleResouce",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/unknown/2",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"unknown",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "singleResourceNotFound",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/unknown/23",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"unknown",
+										"23"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DelayedResponse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/users?delay=3",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "delay",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PostRequest",
+					"item": [
+						{
+							"name": "CreateUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Kishan\",\r\n    \"Role\": \"Automation tester\",\r\n    \"mobile number\": 6393981251\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://reqres.in/api/users",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registeruser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol;\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://reqres.in/api/register",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "invalidRegistration",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"sydney@fife\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://reqres.in/api/register",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "invalidlogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"peter@klaven\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://reqres.in/api/login",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LoginUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://reqres.in/api/login",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PutPatchRequest",
+					"item": [
+						{
+							"name": "PutRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://reqres.in/api/users/2",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatchRequest",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://reqres.in/api/users/2",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DeleteRequest",
+					"item": [
+						{
+							"name": "DeleteRequest",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/users/2",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ProductAPI",
+			"item": [
+				{
+					"name": "GetProductRequest",
+					"item": [
+						{
+							"name": "GetAllProductList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://automationexercise.com/api/productsList",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"productsList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllBrandList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://automationexercise.com/api/brandsList",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"brandsList"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PostProductRequest",
+					"item": [
+						{
+							"name": "PosttoAllProductList",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://automationexercise.com/api/productsList",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"productsList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostTosearchProduct",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "search_product",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "top, tshirt, or jean",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://automationexercise.com/api/searchProduct",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"searchProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SearchProductWithoutSearchProductparameter",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "https://automationexercise.com/api/searchProduct",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"searchProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST To Verify Login with valid details",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "kdsept136@yopmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Kishan@2001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://automationexercise.com/api/verifyLogin",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"verifyLogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Login without email parameter",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "Kishan@12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://automationexercise.com/api/verifyLogin",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"verifyLogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Login with invalid details",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "xyz@yopmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Xyz@2001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://automationexercise.com/api/verifyLogin",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"verifyLogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create/Register User Account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Kishan",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "kdsept136@yopmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Kishan@2001",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Mr",
+											"type": "text"
+										},
+										{
+											"key": "birth_date",
+											"value": "05",
+											"type": "text"
+										},
+										{
+											"key": "birth_month",
+											"value": "09",
+											"type": "text"
+										},
+										{
+											"key": "birth_year",
+											"value": "2001",
+											"type": "text"
+										},
+										{
+											"key": "firstname",
+											"value": "Kishan",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "Dubey",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "Codingbrains",
+											"type": "text"
+										},
+										{
+											"key": "address1",
+											"value": "Bankat",
+											"type": "text"
+										},
+										{
+											"key": "address2",
+											"value": "Bhadohi",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "India",
+											"type": "text"
+										},
+										{
+											"key": "zipcode",
+											"value": "221404",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "UP",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Varansi",
+											"type": "text"
+										},
+										{
+											"key": "mobile_number",
+											"value": "6393981251",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://automationexercise.com/api/createAccount",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"createAccount"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PutRequest",
+					"item": [
+						{
+							"name": "All Brands ListwithoutRequestParameter",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Account",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Deleteuser",
+					"item": [
+						{
+							"name": "Deleteuserwithwrongeway",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://automationexercise.com/api/verifyLogin",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"verifyLogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User Accountwithrightway",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "kdsept136@yopmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Kishan@2001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://automationexercise.com/api/deleteAccount",
+									"protocol": "https",
+									"host": [
+										"automationexercise",
+										"com"
+									],
+									"path": [
+										"api",
+										"deleteAccount"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
